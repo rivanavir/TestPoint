@@ -1,0 +1,220 @@
+@import "reset.scss";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Montserrat-Light.otf')  format('opentype'),
+	     url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.ttf')  format('truetype'), url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat';
+  color: #151c24;
+  font-weight: 300;
+}
+
+.wrap{
+  width: 1124px;
+  margin: 0 auto;
+  &:after{
+    position: relative;
+    content: '';
+    display: table;
+  }
+}
+.tst_bg{
+  background-color: white;
+}
+
+.btn{
+  border-radius: 40px;
+	border: solid 1px #d7e7ec;
+  font-weight: 400 !important;
+  box-shadow: 0 0 0 transparent;
+  &.btn-transp{
+    font-family: 'Montserrat';
+	  font-size: 12px !important;
+    color: #299bc4 !important;
+    padding: 10px 20px !important;
+    line-height: 40px !important;
+    font-weight: 700 !important;
+    display: inline !important;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    background-color: transparent;
+  }
+}
+
+.head{
+  padding: 60px 0 92px;
+  // background: #999;
+  nav.navbar{
+    height: 37px;
+    line-height: 37px;
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+    margin-bottom: 152px;
+    border:0;
+    .navbar-brand {
+      font-family: 'HelveticaNeue';
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: -0.7px;
+      text-align: left;
+      padding: 0;
+      color: #1f252c;
+      line-height: 37px;
+      text-decoration: none;
+      .tm {
+        font-family: 'Montserrat';
+        font-size: 7px;
+        text-align: left;
+        color: #1f252c;
+        position: relative;
+        top: -17px;
+        left: 0;
+      }
+    }
+    ul{
+      li{
+        margin: 0 15px;
+        a{
+          font-family: 'Montserrat';
+          font-size: 14px;
+          font-weight: 300;
+          color: #151c24;
+          line-height: 37px;
+          text-decoration: none;
+          padding: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  blockquote.head-txt {
+  	width: 85%;
+  	text-align: left;
+  	color: #151c24;
+    padding: 0;
+    border:0;
+    h2{
+      font-size: 45px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.4;
+    }
+    .txt-dot {
+      color: #54b1d2;
+    }
+    footer{
+      font-size: 22px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      color: #505354;
+    }
+  }
+}
+
+.carousel-wrap{
+  height: 770px;
+  width: 100%;
+  .carousel{
+    width: 100%;
+    height: 100%;
+    a{
+      display: block;
+      width: 70px;
+	    height: 70px;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      margin-top: -35px;
+      text-align: center;
+      z-index: 500;
+      background: rgba(1,1,1,.3);
+      i.fa{
+        font-size: 40px;
+        color:white;
+        line-height: 70px;
+      }
+      &.right{
+        right: 40px;
+      }
+      &.left{
+        left: 40px;
+      }
+    }
+    .carousel-inner{
+      width: 100%;
+      height: 100%;
+      .item{
+        width: 100%;
+        height: 100%;
+        background-color: #151c24;
+      }
+    }
+  }
+}
+
+.who-we{
+  padding: 151px 0;
+  .who-txt{
+    width: 70%;
+    padding-bottom: 56px;
+    h3{
+      font-size: 35px;
+    }
+    p{
+      font-family: 'OpenSans';
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.73;
+      color: #151c24;
+    }
+  }
+  .photo-wrap{
+    img{
+      max-width: 100%;
+    }
+  }
+  .name-wrap{
+    padding: 54px 0 160px;
+    margin-bottom: 149px;
+    position: relative;
+    border-bottom:1px solid #ddd;
+    .icon-wrap{
+      width: 34px;
+      height: 14px;
+      background: #fff;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      margin-left: -17px;
+      padding-left: 1px;
+      text-align: center;
+      .fa.fa-heart{
+        color:#ddd;
+      }
+    }
+    .name-block{
+      min-height: 105px;
+      h6{
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 10px;
+      }
+      p{
+        color: #505354;
+        font-size: 14px;
+        line-height: 1.71;
+      }
+    }
+  }
+}
