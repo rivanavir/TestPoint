@@ -1,27 +1,34 @@
 $(document).ready(function(){
-  // $('.carousel.carousel-slider').carousel({
-  //   full_width: true,
-  //   time_constant: 100
+
+  var wow = new WOW({
+    offset: 100,
+    callback: function(box) {
+      var visLayer = $(window).height();
+      var boxHeight = $(box).height();
+      // console.log($(box).height());
+      // console.log($(box).offset().top);
+      if(boxHeight > visLayer){
+
+      }
+    }
+  })
+  wow.init();
+
+  // var wowArr = [];
+  // $('.wow').each(function () {
+  //   wowArr.push(this);
   // });
   //
-  // var carouselAutoplay = setInterval(function(){
-  //   $('.fa-angle-right').click();
-  // }, 7000);
+  // function eachArrFn() {
+  //   wowArr.forEach(function (el, i) {
+  //     if(el.is(':visible')){
+  //       console.log(el);
+  //     }
+  //   });
+  // }
   //
-  // $('.carousel .fa-angle-right').click(function(e){
-  //   e.preventDefault();
-  //   $('.carousel').carousel('next');
-  //   clearInterval(carouselAutoplay);
-  //   carouselAutoplay = setInterval(function(){
-  //       $('.fa-angle-right').click();
-  //     }, 7000);
+  // $(window).on('scroll', function () {
+  //   eachArrFn();
   // });
-  // $('.carousel .fa-angle-left').click(function(e){
-  //   e.preventDefault();
-  //   $('.carousel').carousel('prev');
-  //   clearInterval(carouselAutoplay);
-  //   carouselAutoplay = setInterval(function(){
-  //       $('.fa-angle-right').click();
-  //     }, 7000);
-  // });
+
 })
