@@ -20,7 +20,20 @@ var pointSize = 2;
 var lW = 2;
 var color = "#d4dcdf";
 var actColor = "#78b0d0";
+var transColor = "rgba(0,0,0,0)";
 var dotArr = [];
+
+// array square
+var square = $('.big');
+var sqrWidth = square.width();
+var sqrHeight = square.height();
+var sqrTop = square.offset().top;
+var sqrLeft = square.offset().left;
+var sqrRight = sqrLeft + sqrWidth;
+var sqrBottom = sqrTop + sqrHeight;
+
+// console.log(window.pageXOffset, window.pageYOffset);
+// array square end
 
 c_canvas.width = canvas_wrap.offsetWidth;
 c_canvas.height = canvas_wrap.offsetHeight;
@@ -57,22 +70,27 @@ function pointWrite(pointSize, color, lW, i, j){
 // c_canvas.onmouseover(function () {
 // })
 
-c_canvas.addEventListener('mousemove', dotHove, false);
-c_canvas.addEventListener('mouseenter', dotHove, false);
+// c_canvas.addEventListener('mousemove', dotHove, false);
+// c_canvas.addEventListener('mouseenter', dotHove, false);
 
+
+$('#setka').mousemove(function (e) {
+  dotHove(e);
+})
 
 // console.log(left, top);
-function dotHove(){
+function dotHove(event){
   var _x = event.clientX - left;
   var _y = event.clientY - viewportOffset.top;
-  // console.log(x, y);
   // console.log(dotArr.length);
   if(_x%step <= 1 && _y%step <= 1){
     // console.log(_x%step, _y%step);
-    dotArr.forEach(function(item, i){
-      // console.log(_x);
-      if(item.x == _x && item.y == _y){
-        console.log(item.color);
+    dotArr.forEach(function(item, i, dotArr){
+      // console.log(item.x, _x -_x%1);
+      if(item.x == _x -_x%1 && item.y == _y -_y%1){
+        // console.log(_x, _y);
+        dotArr[i].color = actColor;
+        console.log(dotArr[i].color);
       }
     })
   }
